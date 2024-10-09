@@ -13,21 +13,26 @@ body{
   box-sizing: border-box;
 }
 .topbannerImage{
-  background-position: 84%;
-  background-size: 300%;
-  background-position-y:30%;
+  background-position: center;
+  background-position-y: 50%;
   background-repeat: no-repeat;
-}
-
-.topbanner{
- 
+  background-size: cover;
+  height: 600px;
   
- 
-  height: 22rem;
- 
 }
 
-.topbanner::before {
+@media (max-width:650px) {
+  .topbannerImage{
+    height: 500px;
+  }
+  
+}
+
+/* .topbanner{
+  height: 22rem;
+} */
+
+.topbanne::before {
   content: "";
   position: absolute;
   top: 0;
@@ -41,3 +46,31 @@ body{
 .price-select>input[type="radio"]:checked{
 
 }
+
+.choiceCard::before{
+  content: "";
+  width: 17px;
+  background-color: #D91E27;
+  height: 15px;
+  rotate: 49deg;
+  transform: translateY(-50%);
+  position: absolute;
+  left: -13px ;
+  top:50%
+
+
+}
+
+
+  .cCard::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 8rem; /* Height of the fading effect */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.101) 0%, rgb(0, 0, 0) 100%);
+    z-index: 10;
+    bottom: 0;
+    width: 100%rem;
+}
+
